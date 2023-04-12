@@ -49,11 +49,11 @@ class LoginController extends Controller
         return 'username';
     }
 
-    // protected function validateLogin(Request $request)
-    // {
-    //     $request->validate([
-    //         $this->username() => 'required|string',
-    //         'password' => 'required|string',
-    //     ]);
-    // }    
+    protected function validateLogin(Request $request)
+    {
+        $request->validate([
+            $this->username() => 'required|string',
+            'password' => 'required|string',
+        ]);
+    }   
 }
