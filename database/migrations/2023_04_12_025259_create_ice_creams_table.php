@@ -15,6 +15,11 @@ return new class extends Migration
     {
         Schema::create('ice_cream', function (Blueprint $table) {
             $table->id();
+            $table->string('kode_barang',10)->unique();
+            $table->string('nama_ice',50)->nullable();
+            $table->bigInteger('harga')->nullable();
+            $table->string('gambar')->nullable();
+            $table->bigInteger('qty')->nullable();
             $table->timestamps();
         });
     }
